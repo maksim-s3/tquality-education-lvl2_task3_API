@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="REST API (GET/POST)" verbose="1">
+    <test name="Test_rest_assured">
+        <groups>
+            <run>
+                <include name="rest_assured"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.ApiTests"/>
+        </classes>
+    </test>
+    <test name="Test_retrofit2">
+        <groups>
+            <run>
+                <include name="retrofit2"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.ApiTests"/>
+        </classes>
+    </test>
+</suite>
