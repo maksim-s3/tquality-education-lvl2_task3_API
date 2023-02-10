@@ -2,6 +2,7 @@ package api;
 
 import models.Post;
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -15,14 +16,14 @@ public interface TypicodeService {
     Call<List<User>> getListUsers();
 
     @GET("/users/{id}")
-    Call<User> getUser(@Path("id") int id);
+    User getUser(@Path("id") int id);
 
     @GET("/posts/")
     Call<List<Post>> getListPosts();
 
     @GET("/posts/{id}")
-    Call<Post> getPost(@Path("id") int id);
+    Call <Post> getPost(@Path("id") int id);
 
     @POST("/posts/")
-    Call<Post> createPost(@Body Post post);
+    Call <Post> createPost(@Body Post post);
 }

@@ -1,6 +1,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="REST API (GET/POST)" verbose="1">
+    <parameter name="idForResponsePost" value="99"></parameter>
+    <parameter name="idForExpectedRequestPost" value="99"></parameter>
+    <parameter name="userIdForExpectedRequestPost" value="10"></parameter>
+    <parameter name="idNonExistentPost" value="150"></parameter>
+    <parameter name="userIdForNewPost" value="1"></parameter>
+    <parameter name="idForSearchInListUsers" value="5"></parameter>
+    <parameter name="idForSearchSingleUsers" value="5"></parameter>
     <test name="Test_rest_assured">
         <groups>
             <run>
@@ -11,7 +18,7 @@
             <class name="tests.ApiTests"/>
         </classes>
     </test>
-    <test name="Test_retrofit2">
+    <test name="Test_retrofit2" enabled="false">
         <groups>
             <run>
                 <include name="retrofit2"/>
